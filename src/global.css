@@ -1,0 +1,38 @@
+:root {
+  --primary: #262626;
+  --secundary: #d16d00;
+  --purple: #6633cc;
+  --green: #67e480;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  color: var(--secundary);
+  background: #FAFCFD;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  color: var(--primary);
+  font: 400 16px 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid var(--secundary);
+  overflow: hidden;
+}

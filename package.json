@@ -1,0 +1,73 @@
+{
+  "name": "expo",
+  "description": "An Electron boilerplate including React.",
+  "version": "1.0.0",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": {
+    "name": "Alanderson Tomaiz Bernardes",
+    "email": "alan_tomaiz@hotmail.com",
+    "url": "https://www.github.com/AlanTomaiz"
+  },
+  "scripts": {
+    "start": "concurrently -k \"BROWSER=none npm run react:start\" \"npm run electron:start\"",
+    "react:start": "react-scripts start",
+    "react:build": "react-scripts build",
+    "electron:start": "wait-on tcp:3000 && ELECTRON_URL=http://localhost:3000 electron .",
+    "electron:build": "electron-builder"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "2.0.15",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "7.51.0",
+    "react-scripts": "5.0.1",
+    "zod": "3.22.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "productName": "Expo",
+    "asar": true,
+    "linux": {
+      "target": "AppImage"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./cura.ico"
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "concurrently": "8.2.2",
+    "electron": "^29.1.0",
+    "electron-builder": "24.13.3",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-n": "15.7.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "prettier": "3.2.5",
+    "wait-on": "7.2.0"
+  }
+}

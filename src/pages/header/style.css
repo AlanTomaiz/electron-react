@@ -1,0 +1,38 @@
+.tray-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+.tray-container strong {
+  font-size: 26px;
+}
+
+.tray-container strong span {
+  color: var(--secundary);
+}
+
+.tray-container .tray-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tray-container button {
+  display: grid;
+  place-items: center;
+  
+  line-height: 1;
+  border: 0;
+  border-radius: 50%;
+  padding: 4px;
+  background: transparent;
+}
+
+.tray-container button:hover {
+  color: var(--secundary);
+}
